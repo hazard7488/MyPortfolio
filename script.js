@@ -95,53 +95,52 @@ cards.forEach(card => {
 });
 
 
-// --- 3. Contact Form Handling (Supabase/Firebase Placeholder) ---
-// Note: To make this functional, you need to Initialize Supabase.
-// See README.md for instructions.
-
+// --- 3. Formspree AJAX Handling (The Update) ---
+// This sends the form in the background without leaving the page
 const contactForm = document.getElementById('contactForm');
 const statusMessage = document.getElementById('statusMessage');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault(); // Stop the redirect
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    const btn = document.querySelector('.submit-btn');
+        const data = new FormData(contactForm);
+        const btn = document.querySelector('.submit-btn');
 
-    btn.innerText = 'Sending...';
-    btn.style.opacity = '0.7';
+        // Change button text to indicate loading
+        const originalBtnText = btn.innerText;
+        btn.innerText = 'Sending...';
+        btn.style.opacity = '0.7';
 
-    // --- SUPABASE INTEGRATION START ---
-    // Uncomment and fill these in after setting up Supabase
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-    const { createClient } = supabase;
-    const supabaseUrl = 'https://wbrmmhcqiclhdkspmhrz.supabase.co';
-    const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Indicm1taGNxaWNsaGRrc3BtaHJ6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU3MjYwMTUsImV4cCI6MjA4MTMwMjAxNX0.etQkCdZOuQlQOO1MSTNkPBqgkSfh661TD-y588JRYoA';
-    const _supabase = createClient(supabaseUrl, supabaseKey);
-
-    const { error } = await _supabase
-        .from('messages') // Ensure you created a 'messages' table
-        .insert([{ name, email, message }]);
-
-    if (error) {
-        statusMessage.innerText = "Error sending message. Please try again.";
-        statusMessage.style.color = "red";
-    } else {
-        statusMessage.innerText = "Message sent successfully! I will reply soon.";
-        statusMessage.style.color = "#c0c0c0";
-        contactForm.reset();
-    }
-
-    // --- SUPABASE INTEGRATION END ---
-
-    // Simulation for display purposes (Remove this block when backend is active)
-    setTimeout(() => {
-        statusMessage.innerText = "Message sent successfully! (Demo Mode)";
-        statusMessage.style.color = "#c0c0c0";
-        contactForm.reset();
-        btn.innerText = 'Send Message';
-        btn.style.opacity = '1';
-    }, 1500);
-});
+            if (response.ok) {
+                statusMessage.innerText = "Message sent successfully! I will reply soon.";
+                statusMessage.style.color = "#c0c0c0"; // Silver color
+                contactForm.reset(); // Clear the form
+            } else {
+                const errorData = await response.json();
+                if (Object.hasOwn(errorData, 'errors')) {
+                    statusMessage.innerText = errorData["errors"].map(error => error["message"]).join(", ");
+                } else {
+                    statusMessage.innerText = "Oops! There was a problem sending your form.";
+                }
+                statusMessage.style.color = "red";
+            }
+        } catch (error) {
+            statusMessage.innerText = "Error: Could not connect to the server.";
+            statusMessage.style.color = "red";
+        } finally {
+            // Reset button text
+            btn.innerText = originalBtnText;
+            btn.style.opacity = '1';
+        }
+    });
+}

@@ -140,17 +140,17 @@
 <section id="contact" class="section-padding">
     <div class="container glass-card contact-container" data-aos="flip-up">
         <h2 class="section-title">Contact Me</h2>
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/xqarjyvk" method="POST">
             <div class="input-group">
-                <input type="text" id="name" required placeholder=" ">
+                <input type="text" id="name" name="name" required placeholder=" ">
                 <label>Your Name</label>
             </div>
             <div class="input-group">
-                <input type="email" id="email" required placeholder=" ">
+                <input type="email" id="email" name="email" required placeholder=" ">
                 <label>Your Email</label>
             </div>
             <div class="input-group">
-                <textarea id="message" required placeholder=" "></textarea>
+                <textarea id="message" name="message" required placeholder=" "></textarea>
                 <label>Your Message</label>
             </div>
             <button type="submit" class="royal-btn submit-btn">Send Message</button>
