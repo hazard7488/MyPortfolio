@@ -266,6 +266,8 @@ h1, h2, h3 {
     cursor: pointer;
     transition: 0.3s;
     font-family: 'Cinzel';
+    text-decoration: none;
+    text-align: center;
 }
 
 .project-btn:hover {
