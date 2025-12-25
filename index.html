@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Shaswat Kumar </title>
+    <title> Shaswat Kumar | Portfolio </title>
 
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -13,23 +13,34 @@
 </head>
 <body>
 
+<div class="cursor-dot" data-cursor-dot></div>
+<div class="cursor-outline" data-cursor-outline></div>
+
 <canvas id="bg-canvas"></canvas>
 
 <nav class="glass-nav">
     <div class="logo">SK</div>
     <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="hover-target">About</a></li>
+        <li><a href="#skills" class="hover-target">Skills</a></li>
+        <li><a href="#education" class="hover-target">Education</a></li>
+        <li><a href="#projects" class="hover-target">Projects</a></li>
+        <li><a href="#contact" class="hover-target">Contact</a></li>
     </ul>
 </nav>
 
 <header id="hero">
     <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
-        <h1 class="metallic-text">SHASWAT KUMAR</h1>
-        <p class="subtitle">Aspiring Engineer | Innovator | Lifelong Learner</p>
-        <a href="#about" class="royal-btn">Explore My Journey</a>
+        <h2 class="greeting">Hello, I'm</h2>
+        <h1 class="metallic-text typing-container">
+            <span class="typewriter-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="subtitle">Software Engineer | Full-Stack Developer | Machine Learning Enthusiast</p>
+
+        <div class="hero-buttons">
+            <a href="#projects" class="royal-btn hover-target">Explore Work</a>
+            <a href="#contact" class="royal-btn filled-btn hover-target">Hire Me</a>
+        </div>
     </div>
 </header>
 
@@ -41,12 +52,56 @@
             </div>
             <h2 class="section-title">About Me</h2>
             <p>
-                I am a detail-oriented B.Tech graduate in Information Technology with a passion for software engineering and problem-solving.
-                With a strong foundation in full-stack development, machine learning, and automation, I strive to build intelligent systems
-                that bridge the gap between complex data and user-friendly experiences. My journey is defined by a "quality-first" mindset
-                and a relentless pursuit of innovation.
+                I’m a software engineer who loves combining strong technical skills with creative problem-solving. Specializing in <strong>Java, Python, and the MERN stack</strong>, I build intelligent systems that do more than just function—they solve real problems. Whether I’m analyzing human emotions through <strong>NLP</strong> or building secure platforms like <strong>AdConnect</strong>, my focus is always on bridging the gap between complex data and a great user experience. I’m driven by a passion for quality code and a commitment to building software that matters.
             </p>
         </div>
+    </div>
+</section>
+
+<section id="skills" class="section-padding">
+    <h2 class="section-title metallic-text" data-aos="fade-down">Technical Arsenal</h2>
+    <div class="skills-grid">
+
+        <div class="skill-card tilt-card hover-target" data-aos="fade-up">
+            <div class="skill-icon"><i class="fas fa-code"></i></div>
+            <h3>Languages</h3>
+            <ul class="skill-list">
+                <li>Java & Python</li>
+                <li>C/C++</li>
+                <li>HTML5 & CSS3</li>
+            </ul>
+        </div>
+
+        <div class="skill-card tilt-card hover-target" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Web Dev</h3>
+            <ul class="skill-list">
+                <li>React.js & Node.js</li>
+                <li>Express.js</li>
+                <li>Flask & Django</li>
+            </ul>
+        </div>
+
+        <div class="skill-card tilt-card hover-target" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon"><i class="fas fa-database"></i></div>
+            <h3>Data & Tools</h3>
+            <ul class="skill-list">
+                <li>MySQL & PostgreSQL</li>
+                <li>Git & GitHub</li>
+                <li>Postman</li>
+            </ul>
+        </div>
+
+        <div class="skill-card tilt-card hover-target" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon"><i class="fas fa-brain"></i></div>
+            <h3>Core Concepts</h3>
+            <ul class="skill-list">
+                <li>Data Structures (DSA)</li>
+                <li>OOPs & DBMS</li>
+                <li>REST Architecture</li>
+            </ul>
+        </div>
+
     </div>
 </section>
 
@@ -55,16 +110,16 @@
     <div class="timeline">
 
         <div class="timeline-item left" data-aos="fade-right">
-            <div class="timeline-content glass-card tilt-card">
+            <div class="timeline-content glass-card tilt-card hover-target">
                 <h3>Bachelor of Technology (IT)</h3>
                 <h4>Kalinga Institute of Industrial Technology (KIIT)</h4>
-                <span class="date">08/2021 - 08/2025</span>
+                <span class="date">08/2021 - Present</span>
                 <p>Secured 7.54 CGPA</p>
             </div>
         </div>
 
         <div class="timeline-item right" data-aos="fade-left">
-            <div class="timeline-content glass-card tilt-card">
+            <div class="timeline-content glass-card tilt-card hover-target">
                 <h3>Intermediate (Class XII)</h3>
                 <h4>Lord Buddha Public School, Aurangabad</h4>
                 <span class="date">03/2018 - 05/2020</span>
@@ -73,7 +128,7 @@
         </div>
 
         <div class="timeline-item left" data-aos="fade-right">
-            <div class="timeline-content glass-card tilt-card">
+            <div class="timeline-content glass-card tilt-card hover-target">
                 <h3>Matriculation (Class X)</h3>
                 <h4>Lord Buddha Public School, Aurangabad</h4>
                 <span class="date">03/2017 - 06/2018</span>
@@ -84,52 +139,115 @@
     </div>
 </section>
 
+<section id="certifications" class="section-padding">
+    <h2 class="section-title metallic-text" data-aos="fade-down">Certifications</h2>
+    <div class="projects-grid">
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in">
+            <div class="card-inner">
+                <h3>Cybersecurity</h3>
+                <p class="project-role">CISCO</p>
+                <span class="date">Jan 2024 - May 2024</span>
+            </div>
+        </div>
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in" data-aos-delay="100">
+            <div class="card-inner">
+                <h3>Generative AI</h3>
+                <p class="project-role">Coursera</p>
+                <span class="date">June 2024 - Sep 2024</span>
+            </div>
+        </div>
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in" data-aos-delay="200">
+            <div class="card-inner">
+                <h3>Full Stack Web Dev</h3>
+                <p class="project-role">Udemy</p>
+                <span class="date">June 2023 - Oct 2024</span>
+            </div>
+        </div>
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in" data-aos-delay="300">
+            <div class="card-inner">
+                <h3>Python (PCAP)</h3>
+                <p class="project-role"> CISCO </p>
+                <span class="date">Dec 2021 - June 2021</span>
+            </div>
+        </div>
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in" data-aos-delay="400">
+            <div class="card-inner">
+                <h3>Java Programming</h3>
+                <p class="project-role">CSDT IT Solutions</p>
+                <span class="date">Janurary 2024 - June 2024</span>
+            </div>
+        </div>
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in" data-aos-delay="500">
+            <div class="card-inner">
+                <h3>C/C++ Programming</h3>
+                <p class="project-role">CSDT IT Solutions</p>
+                <span class="date">Mar 2021 - Jun 2021</span>
+            </div>
+        </div>
+
+        <div class="project-card tilt-card hover-target" data-aos="zoom-in" data-aos-delay="600">
+            <div class="card-inner">
+                <h3>Relational Database</h3>
+                <p class="project-role">CSDT IT Solutions</p>
+                <span class="date">Jan 2021 - June 2021</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section id="projects" class="section-padding">
     <h2 class="section-title metallic-text" data-aos="fade-down">Academic Projects</h2>
     <div class="projects-grid">
 
-        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="project-card tilt-card hover-target" data-aos="fade-up" data-aos-delay="100">
             <div class="card-inner">
                 <h3>AdConnect</h3>
                 <p class="project-role">Smart Ad Management Platform</p>
                 <p class="description">
                     A full-stack advertising system designed to optimize campaigns using intelligent data insights.
-                    Features a smart dashboard, ad inventory management, and JWT authentication for secure access.
+                    Features a smart dashboard, ad inventory management, and JWT authentication.
                 </p>
                 <div class="tags">
                     <span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>React</span>
                 </div>
-                <a href="./Documents/sentiment-report.pdf" target="_blank" class="project-btn">View Project</a>
+                <a href="#" class="project-btn hover-target">View Details</a>
             </div>
         </div>
 
-        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="project-card tilt-card hover-target" data-aos="fade-up" data-aos-delay="200">
             <div class="card-inner">
                 <h3>Sentiment Analysis Using NLP</h3>
                 <p class="project-role">Minor Project</p>
                 <p class="description">
                     An NLP system analyzing large-scale news articles to extract emotional insights.
-                    Utilizes VADER and NLTK to classify sentiments (Positive, Negative, Neutral) and visualize trends
-                    for strategic decision-making.
+                    Utilizes VADER and NLTK to classify sentiments (Positive, Negative, Neutral, Compound).
                 </p>
                 <div class="tags">
-                    <span>Python</span><span>NLTK</span><span>VADER</span><span>Matplotlib</span>
+                    <span>Python</span><span>NLTK</span><span>VADER</span>
                 </div>
-                <a href="./Documents/sentiment-report.pdf" target="_blank" class="project-btn">View Project</a>            </div>
+                <a href="./Documents/sentiment-report.pdf" target="_blank" class="project-btn hover-target">View Report</a>
+            </div>
         </div>
 
-        <div class="project-card tilt-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="project-card tilt-card hover-target" data-aos="fade-up" data-aos-delay="300">
             <div class="card-inner">
                 <h3>Customer Churn Prediction</h3>
                 <p class="project-role">Major Project</p>
                 <p class="description">
                     A machine learning solution to predict customer attrition. Uses Logistic Regression and
-                    [cite_start]Recursive Feature Elimination (RFE) to identify at-risk customers, enabling proactive retention strategies.
+                    Recursive Feature Elimination (RFE) to identify at-risk customers.
                 </p>
                 <div class="tags">
-                    <span>Python</span><span>Scikit-Learn</span><span>Pandas</span><span>Logistic Regression</span>
+                    <span>Python</span><span>Scikit-Learn</span><span>Pandas</span>
                 </div>
-                <a href="./Documents/churn-report.pdf" target="_blank" class="project-btn">View Project</a>
+                <a href="./Documents/churn-report.pdf" target="_blank" class="project-btn hover-target">View Report</a>
             </div>
         </div>
 
@@ -137,24 +255,72 @@
 </section>
 
 <section id="contact" class="section-padding">
-    <div class="container glass-card contact-container" data-aos="flip-up">
-        <h2 class="section-title">Contact Me</h2>
-        <form id="contactForm" action="https://formspree.io/f/xqarjyvk" method="POST">
-            <div class="input-group">
-                <input type="text" id="name" name="name" required placeholder=" ">
-                <label>Your Name</label>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact-wrapper glass-card" data-aos="flip-up">
+
+        <div class="contact-info">
+            <h3>Contact Information</h3>
+            <p>Feel free to reach out through any of these channels.</p>
+
+            <div class="info-item hover-target">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <span class="label">Email</span>
+                    <span class="value">saswat62032@gmail.com</span>
+                </div>
             </div>
-            <div class="input-group">
-                <input type="email" id="email" name="email" required placeholder=" ">
-                <label>Your Email</label>
+
+            <div class="info-item hover-target">
+                <i class="fas fa-phone"></i>
+                <div>
+                    <span class="label">Phone</span>
+                    <span class="value">+91 7488693558</span>
+                </div>
             </div>
-            <div class="input-group">
-                <textarea id="message" name="message" required placeholder=" "></textarea>
-                <label>Your Message</label>
+
+            <div class="info-item hover-target">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <span class="label">Location</span>
+                    <span class="value">Aurangabad, India</span>
+                </div>
             </div>
-            <button type="submit" class="royal-btn submit-btn">Send Message</button>
-        </form>
-        <div id="statusMessage"></div>
+
+            <div class="social-icons">
+                <a href="https://linkedin.com/in/shaswat-kumar-1ba047295" target="_blank" class="hover-target"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/hazard7488" class="hover-target"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover-target"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <form id="contactForm" action="https://formspree.io/f/xqarjyvk" method="POST">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" name="name" placeholder="Your name" required class="hover-target">
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input type="email" name="email" placeholder="Your email" required class="hover-target">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Subject</label>
+                    <input type="text" name="subject" placeholder="Subject of your message" required class="hover-target">
+                </div>
+
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Your message..." required class="hover-target"></textarea>
+                </div>
+
+                <button type="submit" class="royal-btn submit-btn hover-target">Send Message</button>
+            </form>
+            <div id="statusMessage"></div>
+        </div>
+
     </div>
 </section>
 
@@ -164,7 +330,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
-<script src="./script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
